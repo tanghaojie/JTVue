@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="./JTVue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h2>{{obj.age}}</h2>
+      <h3 v-text="obj.name"></h3>
+      <h3 v-text="msg"></h3>
+      <div v-html="htmlStr"></div>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </div>
+    <script>
+      let vm = new JTVue({
+        el: '#app',
+        data: {
+          obj: {
+            name: 'JT',
+            age: 19
+          },
+          msg: 'msg',
+          htmlStr: '<h3>raw html</h3>'
+        },
+        methods: {}
+      })
+    </script>
+  </body>
+</html>
